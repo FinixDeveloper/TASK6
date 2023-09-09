@@ -1,0 +1,14 @@
+let BasePrice = 47.25
+let cities = ["Madurai", "Theni", "Dindigul",]
+let UberRates = [5, 10, 15]
+let CustomerName = "Praveen"
+let CustomerCity = "Madurai"
+console.log("Hello", CustomerName+ ", Welcome to the Uber Price")
+function getRate(CustomerCity) {
+  function uberRate(_CustomerCity, index) {
+    let FinalRate = (UberRates[index]) * BasePrice 
+    return FinalRate
+  }
+  console.log(CustomerCity, "Price is:", uberRate(CustomerCity, cities.indexOf(CustomerCity)))
+}
+getRate(CustomerCity)
